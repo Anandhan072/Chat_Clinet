@@ -1,0 +1,105 @@
+@use "mixin";
+@use "variables";
+.chat {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: variables.$black--background-color;
+
+  .chat-console {
+    background-color: variables.$logo--color;
+    padding: 1rem 0;
+    .chat-top-navbar {
+      @include mixin.flax_default;
+
+      .log-nav {
+        img {
+          width: 15rem;
+        }
+      }
+      .nav-search {
+        position: relative;
+        input {
+          width: 50rem;
+          background-color: variables.$search-color;
+          border: none;
+          height: 4rem;
+
+          @include mixin.placeholder;
+        }
+        span {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translate(-50%, -40%);
+          img {
+            width: 2rem;
+          }
+        }
+      }
+      .nav-profile {
+        cursor: pointer;
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 5rem;
+          }
+          p {
+            @include mixin.normal-text;
+          }
+        }
+      }
+    }
+  }
+
+  .user-profile-info {
+    position: absolute;
+    top: 0;
+    right: -60rem;
+    width: 60rem;
+    height: 100vh;
+    background-color: variables.$logo--colors;
+    z-index: 3;
+    border: white solid 1px;
+    @include mixin.flex_main;
+    transition: all linear 500ms;
+    gap: 3rem;
+    .user-info {
+      @include mixin.flex_main;
+      margin-top: 2rem;
+
+      .user-name {
+        @include mixin.flex_main;
+        h2 {
+          @include mixin.secondary-header(2rem, bold, black);
+        }
+      }
+
+      .user-main-info {
+        @include mixin.flex_main;
+
+        p {
+          @include mixin.secondary-header($color: black);
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 2rem;
+    }
+
+    .logout {
+      position: relative;
+      @include mixin.placeholder(2rem, white, black);
+      padding: 1rem;
+    }
+  }
+}

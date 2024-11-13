@@ -1,0 +1,99 @@
+// Site Name (Logo/Branding)
+@use "variables";
+@mixin site-name {
+  font-family: variables.$primary-site-name;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: variables.$primary-text-color;
+}
+
+// Header (H1)
+@mixin header-text {
+  font-family: variables.$header-text;
+  font-weight: 700;
+  font-size: 2rem;
+  color: variables.$header-text-color;
+}
+
+// Secondary Header (H2, H3)
+@mixin secondary-header(
+  $font-size: 1.5rem,
+  $font-weight: 600,
+  $color: variables.$secondary-header-color
+) {
+  font-family: variables.$secondary-header;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+}
+
+// Normal Text (Body content)
+@mixin normal-text($font-size: 1rem, $color: variables.$normal-text-color) {
+  font-family: variables.$normal-text;
+  font-weight: 400;
+  font-size: $font-size;
+  color: $color;
+  line-height: 1.6;
+}
+
+// Secondary Text (Footnotes, small print)
+@mixin secondary-text {
+  font-family: variables.$secondary-text;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: variables.$secondary-text-color;
+  line-height: 1.4;
+}
+
+// Placeholder Text (In forms or inputs)
+@mixin placeholder(
+  $font-size: 1.3rem,
+  $background-color: "transparent",
+  $color: variables.$placeholder-text-color
+) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: variables.$placeholder;
+  font-weight: 300;
+  font-size: $font-size;
+  color: $color;
+  background-color: $background-color;
+  border: none;
+}
+
+@mixin forInput($width: 20rem, $height: 3rem, $border: none) {
+  width: $width;
+  height: $height;
+  background-color: variables.$white--background-color;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  border: $border 1px black;
+}
+
+@mixin signBtn {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 1rem 2rem;
+  background-color: variables.$white--background-color;
+
+  border: none;
+}
+
+@mixin lableStyle($font-size: 1.3rem) {
+  display: block;
+  font-size: $font-size;
+}
+
+@mixin flax_default($padding: 0 4rem) {
+  padding: $padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

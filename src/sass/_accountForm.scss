@@ -1,0 +1,127 @@
+@use "mixin";
+@use "variables";
+
+.form_container {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  right: 0px;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  .form_create {
+    width: 50rem;
+
+    background-color: variables.$white--background-color;
+    form {
+      margin: 2rem 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 3rem;
+      .submit-btn {
+        position: relative;
+        left: 59%;
+        button,
+        input {
+          @include mixin.placeholder(
+            $background-color: variables.$black--background-color
+          );
+          height: 3rem;
+          margin-right: 2rem;
+        }
+      }
+      div {
+        width: 47%;
+
+        input {
+          @include mixin.forInput($width: 100%, $border: solid);
+          &::placeholder {
+            @include mixin.placeholder();
+          }
+        }
+        p {
+          @include mixin.placeholder($font-size: 1rem);
+        }
+      }
+      .secName {
+        position: relative;
+        left: 2rem;
+      }
+      .em-pas {
+        width: 100%;
+        #password-1,
+        #password-2,
+        #full-input {
+          @include mixin.forInput($width: 100%, $border: solid);
+        }
+      }
+      .dob-control {
+        span {
+          label {
+            @include mixin.lableStyle(1rem);
+          }
+          span {
+            width: 43rem;
+            gap: 2rem;
+            display: flex;
+
+            select {
+              flex-grow: 1;
+              height: 3rem;
+            }
+          }
+        }
+      }
+
+      .gender-control {
+        width: 100%;
+        span {
+          label {
+            @include mixin.lableStyle(1rem);
+          }
+
+          .gender-option {
+            display: flex;
+            column-gap: 3rem;
+            align-items: center;
+            margin-left: 5rem;
+
+            span {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              @include mixin.placeholder(1.5rem);
+              border: 1px solid variables.$black--background-color;
+              color: variables.$black--background-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.loading-function {
+  img {
+    position: relative;
+    width: 4rem;
+    animation: avs 1s infinite;
+  }
+
+  @keyframes avs {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.success-message {
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: rgb(85, 190, 85);
+}

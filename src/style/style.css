@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lato:wght@300;600&family=Merriweather:wght@700&display=swap");
+.login_con {
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login_con span svg text {
+  font-size: 8rem;
+  fill: #ffffff;
+  stroke: #696969;
+  stroke-width: 4;
+}
+.login_con form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.login_con form div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 2rem;
+}
+.login_con form div input {
+  width: 25rem;
+  height: 3rem;
+}
+.login_con form div input::placeholder {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+}
+.login_con form div p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+  position: absolute;
+  bottom: -1.5rem;
+}
+.login_con form div span {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.login_con form div span span {
+  position: absolute;
+  right: 4px;
+  font-size: 1.1rem;
+}
+.login_con form button {
+  width: 7rem;
+  height: 3rem;
+}
+.login_con form button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.form_container {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  right: 0px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.form_container .form_create {
+  width: 50rem;
+  background-color: #ffffff;
+}
+.form_container .form_create form {
+  margin: 2rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+}
+.form_container .form_create form .submit-btn {
+  position: relative;
+  left: 59%;
+}
+.form_container .form_create form .submit-btn button,
+.form_container .form_create form .submit-btn input {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #bdc3c7;
+  background-color: #000000;
+  border: none;
+  height: 3rem;
+  margin-right: 2rem;
+}
+.form_container .form_create form div {
+  width: 47%;
+}
+.form_container .form_create form div input {
+  width: 100%;
+  height: 3rem;
+  background-color: #ffffff;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  border: solid 1px black;
+}
+.form_container .form_create form div input::placeholder {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+}
+.form_container .form_create form div p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+}
+.form_container .form_create form .secName {
+  position: relative;
+  left: 2rem;
+}
+.form_container .form_create form .em-pas {
+  width: 100%;
+}
+.form_container .form_create form .em-pas #password-1,
+.form_container .form_create form .em-pas #password-2,
+.form_container .form_create form .em-pas #full-input {
+  width: 100%;
+  height: 3rem;
+  background-color: #ffffff;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  border: solid 1px black;
+}
+.form_container .form_create form .dob-control span label {
+  display: block;
+  font-size: 1rem;
+}
+.form_container .form_create form .dob-control span span {
+  width: 43rem;
+  gap: 2rem;
+  display: flex;
+}
+.form_container .form_create form .dob-control span span select {
+  flex-grow: 1;
+  height: 3rem;
+}
+.form_container .form_create form .gender-control {
+  width: 100%;
+}
+.form_container .form_create form .gender-control span label {
+  display: block;
+  font-size: 1rem;
+}
+.form_container .form_create form .gender-control span .gender-option {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+  margin-left: 5rem;
+}
+.form_container .form_create form .gender-control span .gender-option span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.loading-function img {
+  position: relative;
+  width: 4rem;
+  animation: avs 1s infinite;
+}
+@keyframes avs {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.success-message {
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: rgb(85, 190, 85);
+}
+
+.chat {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+}
+.chat .chat-console {
+  background-color: #fedc02;
+  padding: 1rem 0;
+}
+.chat .chat-console .chat-top-navbar {
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat .chat-console .chat-top-navbar .log-nav img {
+  width: 15rem;
+}
+.chat .chat-console .chat-top-navbar .nav-search {
+  position: relative;
+}
+.chat .chat-console .chat-top-navbar .nav-search input {
+  width: 50rem;
+  background-color: rgb(33, 33, 33);
+  border: none;
+  height: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+}
+.chat .chat-console .chat-top-navbar .nav-search span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(-50%, -40%);
+}
+.chat .chat-console .chat-top-navbar .nav-search span img {
+  width: 2rem;
+}
+.chat .chat-console .chat-top-navbar .nav-profile {
+  cursor: pointer;
+}
+.chat .chat-console .chat-top-navbar .nav-profile span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat .chat-console .chat-top-navbar .nav-profile span img {
+  width: 5rem;
+}
+.chat .chat-console .chat-top-navbar .nav-profile span p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+}
+.chat .user-profile-info {
+  position: absolute;
+  top: 0;
+  right: -60rem;
+  width: 60rem;
+  height: 100vh;
+  background-color: #fedc02;
+  z-index: 3;
+  border: white solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all linear 500ms;
+  gap: 3rem;
+}
+.chat .user-profile-info .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.chat .user-profile-info .user-info .user-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat .user-profile-info .user-info .user-name h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+}
+.chat .user-profile-info .user-info .user-main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat .user-profile-info .user-info .user-main-info p {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: black;
+}
+.chat .user-profile-info button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2rem;
+}
+.chat .user-profile-info .logout {
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 1rem;
+}
+
+.chat-all {
+  width: 100%;
+  height: calc(100% - 66px);
+  display: flex;
+}
+.chat-all .show-all-users {
+  position: relative;
+  height: 100%;
+  width: 30rem;
+  z-index: 2;
+  background-color: rgb(33, 33, 33);
+  right: 0;
+  transition: all 1s linear;
+}
+.chat-all .show-all-users .slide-close-open {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  right: -4rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: rgb(33, 33, 33);
+}
+.chat-all .show-all-users .active {
+  border-left: rgb(87, 177, 215) solid 5px;
+  background-color: #bdc3c7;
+}
+.chat-all .show-all-users .show-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+  overflow: hidden;
+  gap: 2rem;
+}
+.chat-all .show-all-users .show-user .chat-user-img {
+  display: flex;
+  position: relative;
+  left: 2rem;
+}
+.chat-all .show-all-users .show-user .chat-user-info {
+  position: relative;
+  left: 2rem;
+}
+.chat-all .show-all-users .show-user .chat-user-info p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #efeeee;
+  line-height: 1.6;
+}
+.chat-all .show-all-users .show-user:hover {
+  background-color: #bdc3c7;
+}
+
+.user-chat-town {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.user-chat-town .chat-top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #efeeee;
+  height: 10%;
+}
+.user-chat-town .chat-top-nav img {
+  width: 5rem;
+}
+.user-chat-town .chat-top-nav .cha-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-chat-town .chat-top-nav .cha-user-info .chat-username {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: black;
+  line-height: 1.6;
+}
+.user-chat-town .chat-top-nav .cha-user-info .chat-status {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: black;
+  line-height: 1.6;
+}
+.user-chat-town .chat-top-nav button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: black;
+  line-height: 1.6;
+}
+.user-chat-town .chat-box {
+  height: 80%;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+}
+.user-chat-town .chat-box .from-message {
+  position: relative;
+  background-color: #fedc02;
+  padding: 1rem;
+  width: fit-content;
+  max-width: 70rem;
+  border-radius: 24px;
+  align-self: self-end;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+}
+.user-chat-town .chat-box .from-message .messages-chat {
+  color: black;
+}
+.user-chat-town .chat-box .from-message .messages-chat .chat-time {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+}
+.user-chat-town .chat-box .from-message:hover .chat-time {
+  visibility: visible;
+}
+.user-chat-town .chat-box .to-message {
+  position: relative;
+  background-color: rgb(80, 137, 206);
+  padding: 1rem;
+  width: fit-content;
+  border-radius: 24px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+  align-self: self-start;
+}
+.user-chat-town .chat-box .to-message .messages-chat {
+  color: black;
+}
+.user-chat-town .chat-box .to-message .messages-chat .chat-time {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+}
+.user-chat-town .chat-box .to-message:hover .chat-time {
+  visibility: visible;
+}
+.user-chat-town .message-box {
+  min-height: 90px;
+  height: 10%;
+  border: 2px solid #fedc02;
+  margin-bottom: 1rem;
+}
+.user-chat-town .message-box .message-box-cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-chat-town .message-box .message-box-cont .message-felid {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 75%;
+  background-color: #333333;
+  border: none;
+  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+  color: #ffffff;
+}
+.user-chat-town .message-box .message-box-cont .message-felid::placeholder {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #bdc3c7;
+  background-color: "transparent";
+  border: none;
+}
+.user-chat-town .message-box .message-box-cont button {
+  position: absolute;
+  width: 7rem;
+  height: 4rem;
+  right: 5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #efeeee;
+  color: #696969;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #696969;
+}
+body .App {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 2rem;
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,195 @@
+@use "mixin";
+@use "variables";
+.chat-all {
+  width: 100%;
+  height: calc(100% - 66px);
+
+  display: flex;
+  .show-all-users {
+    position: relative;
+    height: 100%;
+    width: 30rem;
+    z-index: 2;
+    background-color: variables.$search-color;
+    right: 0;
+    transition: all 1s linear;
+
+    .slide-close-open {
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      right: -4rem;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-color: variables.$search-color;
+    }
+    .active {
+      border-left: variables.$active-border-color solid 5px;
+      background-color: variables.$placeholder-text-color;
+    }
+    .show-user {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 70px;
+      width: 100%;
+      height: 3rem;
+      cursor: pointer;
+
+      overflow: hidden;
+
+      gap: 2rem;
+      .chat-user-img {
+        display: flex;
+        position: relative;
+        left: 2rem;
+      }
+      .chat-user-info {
+        position: relative;
+
+        left: 2rem;
+
+        p {
+          @include mixin.normal-text(
+            1.4rem,
+            variables.$primary--background-color
+          );
+        }
+      }
+      &:hover {
+        background-color: variables.$placeholder-text-color;
+      }
+    }
+  }
+}
+
+.user-chat-town {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .chat-top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: variables.$primary--background-color;
+    height: 10%;
+    img {
+      width: 5rem;
+    }
+    .cha-user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .chat-username {
+        @include mixin.normal-text(2rem, black);
+      }
+      .chat-status {
+        @include mixin.normal-text(1.3rem, black);
+      }
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      @include mixin.normal-text(2rem, black);
+    }
+  }
+
+  .chat-box {
+    height: 80%;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+
+    .from-message {
+      position: relative;
+      background-color: variables.$logo--color;
+      padding: 1rem;
+      width: fit-content;
+      max-width: 70rem;
+      border-radius: 24px;
+      align-self: self-end;
+      @include mixin.placeholder;
+      .messages-chat {
+        color: black;
+
+        .chat-time {
+          visibility: hidden;
+          position: absolute;
+          top: 100%;
+        }
+      }
+      &:hover .chat-time {
+        visibility: visible;
+      }
+    }
+
+    .to-message {
+      position: relative;
+      background-color: rgb(80, 137, 206);
+      padding: 1rem;
+      width: fit-content;
+      border-radius: 24px;
+      @include mixin.placeholder;
+      align-self: self-start;
+      .messages-chat {
+        color: black;
+
+        .chat-time {
+          visibility: hidden;
+          position: absolute;
+          top: 100%;
+        }
+      }
+      &:hover .chat-time {
+        visibility: visible;
+      }
+    }
+  }
+
+  .message-box {
+    min-height: 90px;
+    height: 10%;
+    border: 2px solid variables.$logo--color;
+    margin-bottom: 1rem;
+    .message-box-cont {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .message-felid {
+        display: flex;
+        align-items: center;
+        width: 95%;
+        height: 75%;
+        background-color: variables.$header-text-color;
+        border: none;
+        padding: 0 2rem;
+        @include mixin.placeholder(1.5rem);
+        color: variables.$white--background-color;
+
+        &::placeholder {
+          @include mixin.placeholder;
+        }
+      }
+      button {
+        position: absolute;
+        width: 7rem;
+        height: 4rem;
+        right: 5%;
+      }
+    }
+  }
+}

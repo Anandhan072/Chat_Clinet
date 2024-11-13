@@ -1,0 +1,34 @@
+// Import Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lato:wght@300;600&family=Merriweather:wght@700&display=swap");
+
+// FONT VARIABLES
+$primary-site-name: "Merriweather", serif;
+$header-text: "Roboto", sans-serif;
+$secondary-header: "Lato", sans-serif;
+$normal-text: "Roboto", sans-serif;
+$secondary-text: "Roboto", sans-serif;
+$placeholder: "Lato", sans-serif;
+
+// COLOR VARIABLES
+$primary--background-color: #efeeee;
+$secondary--background-color: #f8deef;
+$primary-text-color: #696969; // Dark blue-gray for site name
+$header-text-color: #333333; // Dark gray for headers
+$secondary-header-color: #4f5d75; // Muted blue-gray for subheaders
+$normal-text-color: #333333; // Dark gray for normal text
+$secondary-text-color: #7f8c8d; // Light gray for secondary text
+$placeholder-text-color: #bdc3c7; // Light gray for placeholders
+$white--background-color: #ffffff;
+$black--background-color: #000000;
+$error--background-color: rgb(255, 0, 0);
+$success--create-message: #55be55;
+
+// chat some deferent color
+
+$logo--color: #fedc02;
+$logo--colors: #fedc02;
+$search-color: rgb(33, 33, 33);
+
+//active boarder
+
+$active-border-color: rgb(87, 177, 215);

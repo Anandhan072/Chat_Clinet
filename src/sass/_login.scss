@@ -1,0 +1,63 @@
+@use "mixin";
+@use "variables";
+.login_con {
+  @include mixin.flax_default;
+  span {
+    svg {
+      text {
+        font-size: 8rem;
+        fill: variables.$white--background-color;
+        stroke: variables.$primary-text-color;
+        stroke-width: 4;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-grow: 1;
+      gap: 2rem;
+
+      input {
+        width: 25rem;
+        height: 3rem;
+        &::placeholder {
+          @include mixin.placeholder;
+        }
+      }
+      p {
+        @include mixin.placeholder($font-size: 1rem);
+        position: absolute;
+        bottom: -1.5rem;
+      }
+      span {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        span {
+          position: absolute;
+          right: 4px;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    button {
+      width: 7rem;
+      height: 3rem;
+      &:hover {
+        background-color: variables.$black--background-color;
+        color: variables.$white--background-color;
+      }
+    }
+  }
+}
